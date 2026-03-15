@@ -327,21 +327,6 @@ export const CERTIFICATIONS: Certification[] = [
     link: "https://certificate.codingninjas.com/view/555a8615b1342865",
   },
 ];
-    ],
-    skills: [SkillNames.HTML, SkillNames.CSS],
-  },
-  {
-    id: 5,
-    date: "Nov 2023",
-    title: "Introduction to Python",
-    issuer: "Coding Ninjas",
-    description: [
-      "Developed a strong foundation in Python programming, covering data structures, control flow, and object-oriented programming.",
-      "Automated tasks and built algorithms focusing on problem-solving and software logic building.",
-    ],
-    skills: [],
-  },
-];
 export const themeDisclaimers = {
   light: [
     "Warning: Light mode emits a gazillion lumens of pure radiance!",
@@ -358,6 +343,7 @@ export const themeDisclaimers = {
     "Dark mode on! Finally, someone who understands true sophistication.",
   ],
 };
+
 
 
 

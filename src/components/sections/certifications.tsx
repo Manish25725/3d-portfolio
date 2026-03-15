@@ -64,7 +64,14 @@ const CertificationCard = ({
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
             <div className="space-y-1">
               <CardTitle className="text-xl font-bold tracking-tight">
-                {certification.title}
+                  {certification.link ? (
+                    <Link href={certification.link} target="_blank" className="hover:text-primary transition-colors flex items-center gap-2">
+                      {certification.title}
+                      <ExternalLink className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
+                    </Link>
+                  ) : (
+                    <span>{certification.title}</span>
+                  )}
               </CardTitle>
               <div className="text-base font-medium text-muted-foreground">
                 {certification.issuer}
@@ -111,4 +118,5 @@ const CertificationCard = ({
 };
 
 export default CertificationsSection;
+
 
