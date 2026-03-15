@@ -1,10 +1,12 @@
-﻿import { CERTIFICATIONS, SkillNames, SKILLS } from "@/data/constants";
+import { CERTIFICATIONS, SkillNames, SKILLS } from "@/data/constants";
 import { SectionHeader } from "./section-header";
 import { Badge } from "../ui/badge";
 import { cn } from "@/lib/utils";
 import SectionWrapper from "../ui/section-wrapper";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 const CertificationsSection = () => {
   if (!CERTIFICATIONS || CERTIFICATIONS.length === 0) return null;
@@ -109,3 +111,4 @@ const CertificationCard = ({
 };
 
 export default CertificationsSection;
+

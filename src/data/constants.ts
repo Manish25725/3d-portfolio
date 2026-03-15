@@ -245,65 +245,103 @@ using use = useUsing("use")`,
   },
 };
 
-export type Experience = {
+export type Certification = {
   id: number;
-  startDate: string;
-  endDate: string;
+  date: string;
   title: string;
-  company: string;
+  issuer: string;
   description: string[];
-  skills: SkillNames[];
+  skills?: SkillNames[];
 };
 
-export const EXPERIENCE: Experience[] = [
+export type Certification = {
+  id: number;
+  date: string;
+  title: string;
+  issuer: string;
+  description: string[];
+  skills?: SkillNames[];
+  link?: string;
+};
+
+export const CERTIFICATIONS: Certification[] = [
   {
     id: 1,
-    startDate: "Dec 2024",
-    endDate: "Present",
-    title: "Full Stack Developer",
-    company: "OmniNexus Sdn Bhd",
+    date: "Oct 2025",
+    title: "MERN Stack",
+    issuer: "Apna College",
     description: [
-      "Built a custom image editor from scratch, cutting $4.8k/year in SaaS costs.",
-      "Architected async job queues processing 1k+ AI tasks daily with bulletproof reliability.",
-      "Optimized media delivery pipeline, slashing asset load times by 40%.",
-      "Shipped high-impact features end-to-end from requirements to production.",
+      "Mastered the full-stack JavaScript ecosystem including MongoDB, Express.js, React, and Node.js.",
+      "Developed interactive and dynamic web applications with complete backend integration and responsive frontends.",
     ],
-    skills: [
-      SkillNames.NEXTJS,
-      SkillNames.TS,
-      SkillNames.REACT,
-      SkillNames.NODEJS,
-      SkillNames.POSTGRES,
-      SkillNames.MONGODB,
-      SkillNames.DOCKER,
-      SkillNames.GCP,
-    ],
+    skills: [SkillNames.MONGODB, SkillNames.EXPRESS, SkillNames.REACT, SkillNames.NODEJS],
+    link: "https://drive.google.com/file/d/1cH9BkFrSp9BlcSNzRqEtbPWYg_5ZZ8Cy/view",
   },
   {
     id: 2,
-    startDate: "Apr 2022",
-    endDate: "Dec 2024",
-    title: "Freelance Full Stack Developer",
-    company: "Self-employed",
+    date: "Aug 2025",
+    title: "Angular and Next.js",
+    issuer: "CSE Pathshala",
     description: [
-      "Transformed chaotic Excel sheets into polished internal tools for various clients.",
-      "Shipped dashboards and custom CMS platforms tailored to each client's workflow.",
-      "Automated repetitive processes, improving efficiency and reducing human error.",
-      "Focused on clean, maintainable code and interfaces that users actually enjoy.",
+      "Gained comprehensive knowledge in modern frontend frameworks.",
+      "Learned server-side rendering, static site generation, and advanced routing with Next.js.",
+      "Explored component-based architecture and web performance optimization strategies."
     ],
-    skills: [
-      SkillNames.REACT,
-      SkillNames.VUE,
-      SkillNames.NODEJS,
-      SkillNames.EXPRESS,
-      SkillNames.MONGODB,
-      SkillNames.POSTGRES,
-      SkillNames.TAILWIND,
-      SkillNames.WORDPRESS,
+    skills: [SkillNames.NEXTJS, SkillNames.REACT, SkillNames.TS],
+    link: "https://drive.google.com/file/d/1h8r6qloUKyttY9TBAPvS6639XFbvSM_z/view",
+  },
+  {
+    id: 3,
+    date: "Apr 2025",
+    title: "Cloud Computing",
+    issuer: "NPTEL",
+    description: [
+      "Learned foundational and advanced concepts of cloud infrastructure, virtualization, and distributed systems.",
+      "Explored cloud service models (IaaS, PaaS, SaaS) and deployment strategies for scalable applications.",
     ],
+    skills: [SkillNames.AWS, SkillNames.GCP, SkillNames.LINUX],
+    link: "https://drive.google.com/file/d/1F-d2wLYEH1u5N88IgaHCTzbz8zW-j5ro/view",
+  },
+  {
+    id: 4,
+    date: "Dec 2023",
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    description: [
+      "Built responsive, mobile-first web layouts using semantic HTML5 and modern CSS3 features like Flexbox and Grid.",
+      "Focused on accessibility, UI/UX principles, and media queries to ensure consistent cross-device performance.",
+    ],
+    skills: [SkillNames.HTML, SkillNames.CSS],
+    link: "https://www.freecodecamp.org/certification/fcc7ca298de-be9b-460d-a44d-44d45fc4afaa/responsive-web-design",
+  },
+  {
+    id: 5,
+    date: "Nov 2023",
+    title: "Introduction to Python",
+    issuer: "Coding Ninjas",
+    description: [
+      "Developed a strong foundation in Python programming, covering data structures, control flow, and object-oriented programming.",
+      "Automated tasks and built algorithms focusing on problem-solving and software logic building.",
+    ],
+    skills: [],
+    link: "https://certificate.codingninjas.com/view/555a8615b1342865",
   },
 ];
-
+    ],
+    skills: [SkillNames.HTML, SkillNames.CSS],
+  },
+  {
+    id: 5,
+    date: "Nov 2023",
+    title: "Introduction to Python",
+    issuer: "Coding Ninjas",
+    description: [
+      "Developed a strong foundation in Python programming, covering data structures, control flow, and object-oriented programming.",
+      "Automated tasks and built algorithms focusing on problem-solving and software logic building.",
+    ],
+    skills: [],
+  },
+];
 export const themeDisclaimers = {
   light: [
     "Warning: Light mode emits a gazillion lumens of pure radiance!",
@@ -320,4 +358,6 @@ export const themeDisclaimers = {
     "Dark mode on! Finally, someone who understands true sophistication.",
   ],
 };
+
+
 
