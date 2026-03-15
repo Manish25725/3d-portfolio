@@ -417,6 +417,72 @@ const projects: Project[] = [
     },
   },
   {
+    id: "ai-resume-builder",
+    category: "AI & Productivity",
+    title: "AI-Powered Resume Builder",
+    src: "/assets/projects-screenshots/ai-resume-builder/landing.png",
+    screenshots: ["landing.png"],
+    live: "https://ai-powered-resume-builder-ibhl.onrender.com",
+    github: "https://github.com/Manish25725/AI-Powered-Resume-Builder",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.aceternity,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.mongo,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Create professional-looking CVs in minutes
+          </TypographyP>
+          <TypographyP className="font-mono mt-4">
+            An AI-powered resume builder designed to help users create, customize, and export stunning resumes effortlessly. With rich forms for gathering personal info, experiences, and education, the application delegates manual formatting to dynamic templates.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          
+          <SlideShow
+            images={[`${BASE_PATH}/ai-resume-builder/landing.png`]} 
+          />
+
+          <TypographyH3 className="my-4 mt-8">Rich Data Entry & Templates</TypographyH3>
+          <p className="font-mono mb-2">
+            Features an intuitive form layout for entering personal information, work experience, education, and projects. Users can instantly switch between multiple templates for different styles.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/ai-resume-builder/editor.png`,
+              `${BASE_PATH}/ai-resume-builder/templates.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Export & Live Sharing</TypographyH3>
+          <p className="font-mono mb-2">
+            Resumes don't just stay in the browser. Users can securely export them to a neat PDF format or generate a shareable live link that serves the resume directly to recruiters.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/ai-resume-builder/export.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">AI Supercharged</TypographyH3>
+          <ul className="list-disc ml-6 space-y-2 mb-4">
+            <li className="font-mono">Integrated with AI models (Gemini / OpenAI API) to suggest impactful keywords and phrasing for experiences and projects.</li>
+            <li className="font-mono">Cloud-synced images and attachments backed by ImageKit.</li>
+            <li className="font-mono">Secure user authentication mapping to their unique saved resumes.</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
     id: "portfolio",
     category: "Portfolio",
     title: "My Portfolio",
