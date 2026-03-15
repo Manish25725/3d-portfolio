@@ -245,4 +245,79 @@ using use = useUsing("use")`,
   },
 };
 
+export type Experience = {
+  id: number;
+  startDate: string;
+  endDate: string;
+  title: string;
+  company: string;
+  description: string[];
+  skills: SkillNames[];
+};
+
+export const EXPERIENCE: Experience[] = [
+  {
+    id: 1,
+    startDate: "Dec 2024",
+    endDate: "Present",
+    title: "Full Stack Developer",
+    company: "OmniNexus Sdn Bhd",
+    description: [
+      "Built a custom image editor from scratch, cutting $4.8k/year in SaaS costs.",
+      "Architected async job queues processing 1k+ AI tasks daily with bulletproof reliability.",
+      "Optimized media delivery pipeline, slashing asset load times by 40%.",
+      "Shipped high-impact features end-to-end from requirements to production.",
+    ],
+    skills: [
+      SkillNames.NEXTJS,
+      SkillNames.TS,
+      SkillNames.REACT,
+      SkillNames.NODEJS,
+      SkillNames.POSTGRES,
+      SkillNames.MONGODB,
+      SkillNames.DOCKER,
+      SkillNames.GCP,
+    ],
+  },
+  {
+    id: 2,
+    startDate: "Apr 2022",
+    endDate: "Dec 2024",
+    title: "Freelance Full Stack Developer",
+    company: "Self-employed",
+    description: [
+      "Transformed chaotic Excel sheets into polished internal tools for various clients.",
+      "Shipped dashboards and custom CMS platforms tailored to each client's workflow.",
+      "Automated repetitive processes, improving efficiency and reducing human error.",
+      "Focused on clean, maintainable code and interfaces that users actually enjoy.",
+    ],
+    skills: [
+      SkillNames.REACT,
+      SkillNames.VUE,
+      SkillNames.NODEJS,
+      SkillNames.EXPRESS,
+      SkillNames.MONGODB,
+      SkillNames.POSTGRES,
+      SkillNames.TAILWIND,
+      SkillNames.WORDPRESS,
+    ],
+  },
+];
+
+export const themeDisclaimers = {
+  light: [
+    "Warning: Light mode emits a gazillion lumens of pure radiance!",
+    "Caution: Light mode ahead! Please don't try this at home.",
+    "Only trained professionals can handle this much brightness. Proceed with sunglasses!",
+    "Brace yourself! Light mode is about to make everything shine brighter than your future.",
+    "Flipping the switch to light mode... Are you sure your eyes are ready for this?",
+  ],
+  dark: [
+    "Light mode? I thought you went insane... but welcome back to the dark side!",
+    "Switching to dark mode... How was life on the bright side?",
+    "Dark mode activated! Thanks you from the bottom of my heart, and my eyes too.",
+    "Welcome back to the shadows. How was life out there in the light?",
+    "Dark mode on! Finally, someone who understands true sophistication.",
+  ],
+};
 
