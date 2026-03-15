@@ -266,13 +266,63 @@ const projects: Project[] = [
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           
-          <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
-          <ul className="list-disc ml-6 space-y-2">
-            <li className="font-mono">Explore trending videos across various categories like Music, Gaming, and Movies.</li>
-            <li className="font-mono">Create and manage your own channel, upload videos, and track your views.</li>
-            <li className="font-mono">Like, comment, and save your favorite videos to custom playlists.</li>
-            <li className="font-mono">Fully responsive design optimizing the streaming experience for all devices.</li>
-          </ul>
+          <SlideShow
+            images={[`${BASE_PATH}/playvibe/landing.png`]} 
+          />
+
+          <TypographyH3 className="my-4 mt-8">Authentication</TypographyH3>
+          <p className="font-mono mb-2">
+            Seamless and secure user authentication system. Users can easily sign up to join the community or log in to their existing accounts to start sharing and interacting with content.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/playvibe/login.png`,
+              `${BASE_PATH}/playvibe/signup.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Video Management & Playback</TypographyH3>
+          <p className="font-mono mb-2">
+            Secure video and thumbnail uploads via Cloudinary. Enjoy a seamless viewing experience with functionalities like Watch History, Watch Later, and nested comments with like/dislike interactions.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/playvibe/player.png`,
+              `${BASE_PATH}/playvibe/comments.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Live Streaming & Real-time Chat</TypographyH3>
+          <p className="font-mono mb-2">
+            Real-time video broadcasting built with Node Media Server and HLS.js. Engage with your audience instantly using the Socket.io powered live-chat and viewer count tracking.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/playvibe/livestream.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Channel Profile & Dashboard</TypographyH3>
+          <p className="font-mono mb-2">
+            Manage your videos, view subscriber counts, and monitor platform statistics with an intuitive channel profile interface and a robust admin dashboard.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/playvibe/channel.png`,
+              `${BASE_PATH}/playvibe/dashboard.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Social & Community</TypographyH3>
+          <p className="font-mono mb-2">
+            Build a following! Subscribe to channels, interact using community posts (tweets), create playlists, and stay updated with real-time notifications.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/playvibe/tweets.png`,
+              `${BASE_PATH}/playvibe/playlists.png`,
+            ]}
+          />
         </div>
       );
     },
