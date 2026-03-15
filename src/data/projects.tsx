@@ -236,6 +236,95 @@ export type Project = {
 };
 const projects: Project[] = [
   {
+    id: "ecocycle",
+    category: "Green Tech / Management",
+    title: "EcoCycle E-Waste Management",
+    src: "/assets/projects-screenshots/ecocycle/landing.png",
+    screenshots: ["landing.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.tailwind,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.mongo,
+      ],
+    },
+    live: "https://e-waste-frontened.onrender.com",
+    github: "https://github.com/Manish25725/GreenCircuit",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            EcoCycle - Comprehensive E-Waste Management System
+          </TypographyP>
+          <TypographyP className="font-mono mt-4">
+            EcoCycle is a full-stack platform designed to facilitate the collection, recycling, and disposal of electronic waste. It features a transparent and efficient multi-role system that connects residents, waste agencies, businesses, and administrators.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          
+          <SlideShow
+            images={[`${BASE_PATH}/ecocycle/landing.png`]} 
+          />
+
+          <TypographyH3 className="my-4 mt-8">Multi-Role Architecture</TypographyH3>
+          <p className="font-mono mb-2">
+            The system supports distinct experiences for different users: Residents schedule pickups, Agencies manage service areas, Businesses track inventory, and Admins oversee system analytics, all secured using JWT and Role-Based Access Control.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/ecocycle/dashboard.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Smart Booking & Rewards</TypographyH3>
+          <p className="font-mono mb-2">
+            Users can schedule e-waste pickups with real-time slot management. In return, a points-based rewards system incentivizes safe recycling. The points can be collected and redeemed for exclusive platform benefits.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/ecocycle/booking.png`,
+              `${BASE_PATH}/ecocycle/rewards.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Agency & Business Portals</TypographyH3>
+          <p className="font-mono mb-2">
+            Collection agencies are given a dedicated interface to control their service areas and glean analytics. Meanwhile, the Business portal enables companies to effortlessly track e-waste inventory and manage their recycling certificates natively.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/ecocycle/agency.png`,
+              `${BASE_PATH}/ecocycle/business.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Analytics Dashboard & Contact System</TypographyH3>
+          <p className="font-mono mb-2">
+            Users get access to comprehensive analytics customized to their role type, alongside an integrated messaging and support system providing continuous coverage.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/ecocycle/analytics.png`,
+              `${BASE_PATH}/ecocycle/contact.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Enterprise Security</TypographyH3>
+          <ul className="list-disc ml-6 space-y-2 mb-4">
+            <li className="font-mono">Rate limiting on all API endpoints to prevent brute force & DoS attacks.</li>
+            <li className="font-mono">Helmet.js security headers with XSS and clickjacking protection.</li>
+            <li className="font-mono">Input validation & sanitization, preventing NoSQL injection and HTTP Parameter Pollution.</li>
+            <li className="font-mono">Fully responsive, mobile-first design tailored to fit all modern devices seamlessly.</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
     id: "playvibe",
     category: "Video Sharing & Streaming Platform",
     title: "PlayVibe",
