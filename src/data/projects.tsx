@@ -1,4 +1,4 @@
-﻿import AceTernityLogo from "@/components/logos/aceternity";
+import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
@@ -464,7 +464,7 @@ const projects: Project[] = [
 
           <TypographyH3 className="my-4 mt-8">Export & Live Sharing</TypographyH3>
           <p className="font-mono mb-2">
-            Resumes don't just stay in the browser. Users can securely export them to a neat PDF format or generate a shareable live link that serves the resume directly to recruiters.
+            Resumes don&apos;t just stay in the browser. Users can securely export them to a neat PDF format or generate a shareable live link that serves the resume directly to recruiters.
           </p>
           <SlideShow
             images={[
@@ -515,7 +515,7 @@ const projects: Project[] = [
           </TypographyH3>
           <p className="font-mono mb-2">
             Did you see that 3D keyboard modal? Yeah! I made that. That
-            interactive keyboard is being rendered in 3D on a webpage ðŸ¤¯, and
+            interactive keyboard is being rendered in 3D on a webpage 🤯, and
             pressing each keycap reveals a skill in a goofy way. It&apos;s like
             typing, but make it art.
           </p>
@@ -533,7 +533,7 @@ const projects: Project[] = [
           <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>
 
           <p className="font-mono mb-2">
-            My top personal and freelance projects â€” no filler, all killer.
+            My top personal and freelance projects — no filler, all killer.
           </p>
           <SlideShow
             images={[
@@ -542,7 +542,7 @@ const projects: Project[] = [
             ]}
           />
           <p className="font-mono mb-2 mt-8 text-center">
-            This site&apos;s not just a portfolio â€” it&apos;s a whole vibe.
+            This site&apos;s not just a portfolio — it&apos;s a whole vibe.
           </p>
         </div>
       );
@@ -550,3 +550,4 @@ const projects: Project[] = [
   },
 ];
 export default projects;
+

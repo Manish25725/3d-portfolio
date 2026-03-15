@@ -252,15 +252,6 @@ export type Certification = {
   issuer: string;
   description: string[];
   skills?: SkillNames[];
-};
-
-export type Certification = {
-  id: number;
-  date: string;
-  title: string;
-  issuer: string;
-  description: string[];
-  skills?: SkillNames[];
   link?: string;
 };
 
@@ -343,6 +334,7 @@ export const themeDisclaimers = {
     "Dark mode on! Finally, someone who understands true sophistication.",
   ],
 };
+
 
 
 
