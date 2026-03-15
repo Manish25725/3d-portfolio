@@ -40,15 +40,7 @@ export default function Footer() {
         </motion.li>
       </ul>
       <ul>
-        <motion.li
-          custom={[0.3, 0]}
-          variants={translate}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >
-          Blog
-        </motion.li>
+        
         <motion.li
           custom={[0.3, 0]}
           variants={translate}
@@ -62,3 +54,4 @@ export default function Footer() {
     </div>
   );
 }
+
