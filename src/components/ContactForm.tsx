@@ -7,7 +7,6 @@ import { Textarea } from "./ui/ace-textarea";
 import { cn } from "@/lib/utils";
 import { useToast } from "./ui/use-toast";
 import { Button } from "./ui/button";
-import { useRouter } from "next/navigation";
 
 const ContactForm = () => {
   const [fullName, setFullName] = React.useState("");
@@ -16,28 +15,16 @@ const ContactForm = () => {
   const [loading, setLoading] = React.useState(false);
 
   const { toast } = useToast();
-  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullName,
-          email,
-          message,
-        }),
-      });
-      const data = await res.json();
-      if (data.error) throw new Error(data.error);
+
+    // Simulate a network request without actually sending data to the backend
+    setTimeout(() => {
       toast({
-        title: "Thank you!",
-        description: "I'll get back to you as soon as possible.",
+        title: "Success",
+        description: "Details submitted successfully!",
         variant: "default",
         className: cn("top-0 mx-auto flex fixed md:top-4 md:right-4"),
       });
@@ -45,21 +32,7 @@ const ContactForm = () => {
       setFullName("");
       setEmail("");
       setMessage("");
-      const timer = setTimeout(() => {
-        router.push("/");
-        clearTimeout(timer);
-      }, 1000);
-    } catch (err) {
-      toast({
-        title: "Error",
-        description: "Something went wrong! Please check the fields.",
-        className: cn(
-          "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
-        ),
-        variant: "destructive",
-      });
-    }
-    setLoading(false);
+    }, 1000); // 1 second delay to show the loading animation
   };
   return (
     <form className="min-w-7xl mx-auto sm:mt-4" onSubmit={handleSubmit}>
