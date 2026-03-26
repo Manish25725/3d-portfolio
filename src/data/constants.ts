@@ -335,6 +335,28 @@ export const themeDisclaimers = {
   ],
 };
 
+export type Achievement = {
+  id: number;
+  title: string;
+  description: string;
+  link?: string;
+};
+
+export const ACHIEVEMENTS: Achievement[] = [
+  {
+    id: 1,
+    title: "LeetCode Problem Solver",
+    description: "Solved 600+ problems on LeetCode.",
+    link: "https://leetcode.com/u/Manish725/",
+  },
+  {
+    id: 2,
+    title: "Competitive Programming",
+    description: "Achieved a 3-star rating on CodeChef and Specialist on Codeforces.",
+  },
+];
+
+
 
 
 
